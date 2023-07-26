@@ -23,7 +23,7 @@ spec:
   datacenterRef:
     kind: VSphereDatacenterConfig
     name: release-i-0aaae-fc5d9f1
-  eksaVersion: v0.0.0-dev-release-0.17+build.39
+  eksaVersion: v0.0.0-dev-release-0.17+build.40
   externalEtcdConfiguration:
     count: 1
     machineGroupRef:
@@ -36,7 +36,7 @@ spec:
   managementCluster:
     name: release-i-0aaae-fc5d9f1
   workerNodeGroupConfigurations:
-  - count: 3
+  - count: 4
     machineGroupRef:
       kind: VSphereMachineConfig
       name: release-i-0aaae-fc5d9f1
@@ -88,10 +88,10 @@ metadata:
 spec:
   cloneMode: fullClone
   datastore: /SDDC-Datacenter/datastore/WorkloadDatastore
-  diskGiB: 25
+  diskGiB: 35
   folder: /SDDC-Datacenter/vm
-  memoryMiB: 8192
-  numCPUs: 2
+  memoryMiB: 10196
+  numCPUs: 1
   osFamily: ubuntu
   resourcePool: /SDDC-Datacenter/host/Cluster-1/Resources/Compute-ResourcePool
   template: /SDDC-Datacenter/vm/Templates/kubernetes-1-27-eks-7-ubuntu
